@@ -1,7 +1,0 @@
-Django>=1.11.29,<2.0
-pytz
-cloudinary
-django-embed-video
-django-environ
-gunicorn
-whitenoise<4.0
