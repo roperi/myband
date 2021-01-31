@@ -176,7 +176,7 @@ LOGGING = {
         },
         'logfile': {
             'class': 'logging.FileHandler',
-            'filename': os.path.join(PROJECT_ROOT, 'log/coctelduo.log'),
+            'filename': os.path.join(project_root, 'log/coctelduo.log'),
             'formatter': 'custom',
         },
 
