@@ -8,7 +8,7 @@ https://docs.djangoproject.com/en/dev/howto/deployment/checklist/
 For the full list of settings and their values, see:
 https://docs.djangoproject.com/en/dev/ref/settings/
 """
-
+import os
 import environ
 import sys
 
