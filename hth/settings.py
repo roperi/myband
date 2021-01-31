@@ -214,7 +214,7 @@ SECRET_KEY = env('SECRET_KEY')
 ALLOWED_HOSTS = [
     '127.0.0.1',
     'localhost',
-    '45.32.81.78',
+    '.coctelduo.com',
 ]
 
 
