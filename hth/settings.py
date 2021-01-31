@@ -200,7 +200,7 @@ LOGGING = {
 vars().update(env.email_url())
 
 ADMINS = [
-    ('Brian', 'admin@automatones.com'),
+    ('Rudy', 'admin@automatones.com'),
 ]
 
 DEFAULT_FROM_EMAIL = 'admin@automatones.com'
