@@ -21,7 +21,8 @@ env = environ.Env(
 )
 env.read_env()
 
-DEBUG = env('DEBUG')
+# DEBUG = env('DEBUG')
+DEBUG = os.environ.get('DEBUG')
 TESTING = env('TESTING')
 
 # Application definition
