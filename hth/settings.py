@@ -152,10 +152,10 @@ TEMPLATES = [
 vars().update(env.email_url())
 
 ADMINS = [
-    ('Brian', 'bhrutledge@gmail.com'),
+    ('Brian', 'admin@automatones.com'),
 ]
 
-DEFAULT_FROM_EMAIL = 'band@hallelujahthehills.com'
+DEFAULT_FROM_EMAIL = 'admin@automatones.com'
 SERVER_EMAIL = env('SERVER_EMAIL')
 
 
