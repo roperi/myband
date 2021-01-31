@@ -166,8 +166,7 @@ SECRET_KEY = env('SECRET_KEY')
 ALLOWED_HOSTS = [] if DEBUG else [
     '127.0.0.1',
     'localhost',
-    '.debugged.org',
-    '.hallelujahthehills.com',
+    '45.32.81.78',
 ]
 
 
