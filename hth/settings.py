@@ -146,6 +146,54 @@ TEMPLATES = [
     },
 ]
 
+# A sample logging configuration. The only tangible logging
+# performed by this configuration is to send an email to
+# the site admins on every HTTP 500 error when DEBUG=False.
+# See http://docs.djangoproject.com/en/dev/topics/logging for
+# more details on how to customize your logging configuration.
+LOGGING = {
+    "version": 1,
+    "disable_existing_loggers": False,
+    'formatters': {
+        'verbose': {
+            'format': '%(levelname)s %(asctime)s %(module)s %(process)d %(thread)d %(message)s'
+        },
+        'custom': {
+            'format': '[%(levelname)s. %(name)s, (line #%(lineno)d) - %(asctime)s] %(message)s'
+        },
+    },
+
+    "filters": {
+        "require_debug_false": {
+            "()": "django.utils.log.RequireDebugFalse"
+        }
+    },
+    "handlers": {
+        "mail_admins": {
+            "level": "ERROR",
+            "filters": ["require_debug_false"],
+            "class": "django.utils.log.AdminEmailHandler"
+        },
+        'logfile': {
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(PROJECT_ROOT, 'log/coctelduo.log'),
+            'formatter': 'custom',
+        },
+
+    },
+    "loggers": {
+        "django.request": {
+            "handlers": ["mail_admins"],
+            "level": "ERROR",
+            "propagate": True,
+        },
+        'django': {
+            'handlers': ['logfile'],
+        },
+
+    }
+}
+
 
 # Email
 
