@@ -6,22 +6,22 @@
 
 {% block main_content %}
 <figure class="hero-img">
-    <img src="{% cloudinary_url 'hth_lilypad_1.jpg' width='1280' height='480' crop='fill' gravity='custom' %}" alt="HTH live">
+    <img src="{% cloudinary_url 'coctelduo__hero_live_banner_o5ggai.jpg' width='1280' height='480' crop='fill' gravity='custom' %}" alt="HTH live">
     <figcaption>
-        <div class="img-credit">Photo courtesy of <a href="http://www.samuelquinn.com/">Samuel Quinn</a></div>
+        <div class="img-credit">Foto de Luis Enrique Flores</div>
     </figcaption>
 </figure>
 
 <article class="container content gig-list">
 
-    <h1 class="container-header">Live</h1>
+    <h1 class="container-header">En vivo</h1>
 
     <div class="content-section">
         {% include "shows/_gig_upcoming.html" with gig_list=gig_list.upcoming %}
     </div>
 
     <section class="content-section">
-        <h2>Past Shows</h2>
+        <h2>Presentaciones anteriores</h2>
 
         {% for gig in gig_list.past %}
         <article class="content gig">
