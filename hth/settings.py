@@ -15,15 +15,8 @@ import sys
 project_root = environ.Path(__file__) - 2
 src_root = project_root.path('hth')
 
-env = environ.Env(
-    DEBUG=(bool, False),
-    TESTING=(bool, 'pytest' in sys.argv[0]),
-)
-env.read_env()
 
-# DEBUG = env('DEBUG')
 DEBUG = os.environ.get('DEBUG')
-TESTING = env('TESTING')
 
 # Application definition
 
@@ -112,10 +105,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = project_root('staticfiles')
 STATICFILES_STORAGE = (
     'whitenoise.storage.CompressedManifestStaticFilesStorage'
-    # https://docs.djangoproject.com/en/1.11/ref/contrib/staticfiles/#django.contrib.staticfiles.storage.ManifestStaticFilesStorage.manifest_strict
-    # https://stackoverflow.com/a/58299776/3188289
-    if not TESTING else
-    'django.contrib.staticfiles.storage.StaticFilesStorage'
+    # 'django.contrib.staticfiles.storage.StaticFilesStorage'
 )
 STATICFILES_DIRS = [
     src_root('static'),
@@ -198,19 +188,17 @@ LOGGING = {
 
 # Email
 
-vars().update(env.email_url())
-
 ADMINS = [
     ('Rudy', 'admin@automatones.com'),
 ]
 
 DEFAULT_FROM_EMAIL = 'admin@automatones.com'
-SERVER_EMAIL = env('SERVER_EMAIL')
+SERVER_EMAIL = os.environ.get('SERVER_EMAIL')
 
 
 # Security
 
-SECRET_KEY = env('SECRET_KEY')
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
@@ -224,3 +212,4 @@ ALLOWED_HOSTS = [
 DEBUG_TOOLBAR_CONFIG = {
     'JQUERY_URL': '',
 }
+
