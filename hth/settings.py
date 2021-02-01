@@ -16,7 +16,7 @@ project_root = environ.Path(__file__) - 2
 src_root = project_root.path('hth')
 
 
-DEBUG = os.environ.get('DEBUG', False)
+DEBUG = os.environ.get('DEBUG', False) == 'True'
 
 # Application definition
 
@@ -212,4 +212,3 @@ ALLOWED_HOSTS = [
 DEBUG_TOOLBAR_CONFIG = {
     'JQUERY_URL': '',
 }
-
