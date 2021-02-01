@@ -16,7 +16,7 @@ project_root = environ.Path(__file__) - 2
 src_root = project_root.path('hth')
 
 
-DEBUG = os.environ.get('DEBUG')
+DEBUG = os.environ.get('DEBUG', False)
 
 # Application definition
 
