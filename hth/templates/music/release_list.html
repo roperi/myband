@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load i18n %}
 
 {% block title %}Music | {{ block.super }}{% endblock %}
 {% block main_class %}navigation-page{% endblock %}
@@ -20,7 +21,9 @@
                 <h3 class="content-title">
                     <a href="{{ release.get_absolute_url }}">{{ release.title }}</a>
                 </h3>
+                {% language 'es' %}
                 <p class="content-subtitle">{{ release.date|date:"M Y" }}</p>
+                {% endlanguage %}
             </header>
         </article>
         {% endfor %}

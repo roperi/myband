@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load cloudinary %}
+{% load i18n %}
 
 {% block title %}{{ release.title }} | {{ block.super }}{% endblock %}
 
@@ -7,7 +8,9 @@
 <article class="container content release release-detail">
     <header class="container-header content-header">
         <h1 class="content-title">{{ release.title }}</h1>
+        {% language 'es' %}
         <p class="content-subtitle">{{ release.date|date }}</p>
+        {% endlanguage %}
     </header>
 
     {% if release.cover_url %}

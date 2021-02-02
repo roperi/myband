@@ -1,3 +1,4 @@
+{% load i18n %}
 <header class="content-header">
     <h3 class="content-title">
         <a href="{{ video.get_absolute_url }}">{{ video.title }}</a>
@@ -8,6 +9,7 @@
         from <a href="{{ video.release.get_absolute_url }}">{{ video.release.title }}</a>
     </p>
     {% endif %}
-
+    {% language 'es' %}
     <p class="content-subtitle">{{ video.publish_on|date }}</p>
+    {% endlanguage %}
 </header>

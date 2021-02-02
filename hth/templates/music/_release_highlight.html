@@ -1,3 +1,4 @@
+{% load i18n %}
 <article class="content content-highlight release">
     {% include "music/_release_cover.html" %}
 
@@ -6,7 +7,9 @@
             <h3 class="content-title">
                 <a href="{{ release.get_absolute_url }}">{{ release.title }}</a>
             </h3>
+            {% language 'es' %}
             <p class="content-subtitle">{{ release.date|date }}</p>
+            {% endlanguage %}
         </header>
 
         <div class="content-text">

@@ -1,3 +1,4 @@
+{% load i18n %}
 <article class="content content-text press">
     {% if press.quote %}
     <blockquote>{{ press.body|safe }}</blockquote>
@@ -13,7 +14,7 @@
             {% else %}
             {{ press.title }}
             {% endif %}
-            {% endspaceless %}, {{ press.date|date }}
+            {% endspaceless %}, {% language 'es' %}{{ press.date|date }}{% endlanguage %}
         </p>
 
         {% if not release and press.release %}

@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load i18n %}
 
 {% block title %}{{ video.title }} | {{ block.super }}{% endblock %}
 
@@ -14,8 +15,9 @@
             from <a href="{{ video.release.get_absolute_url }}">{{ video.release.title }}</a>
         </p>
         {% endif %}
-
+        {% language 'es' %}
         <p class="content-subtitle">{{ video.publish_on|date }}</p>
+        {% endlanguage %}
     </header>
 
     <div class="content-text">
@@ -24,7 +26,7 @@
 
     {% if video.credits %}
     <section class="content-section">
-        <h2>Credits</h2>
+        <h2>Créditos</h2>
         <div class="content-text">
             {{ video.credits|safe }}
         </div>
