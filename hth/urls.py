@@ -12,15 +12,12 @@ urlpatterns = [
     url(r'^news/', include('hth.news.urls')),
     url(r'^live/', include('hth.shows.urls')),
     url(r'^', include('hth.music.urls')),
+    url(r'^admindocs/', include('django.contrib.admindocs.urls')),
+    url(r'^admin/', include(admin.site.urls)),
+
 ]
 
 if settings.MEDIA_URL and settings.MEDIA_ROOT:
     urlpatterns += static(settings.MEDIA_URL,
                           document_root=settings.MEDIA_ROOT)
 
-# TODO: Debug-only until HTTPS is configured
-if settings.DEBUG:
-    urlpatterns += [
-        url(r'^admindocs/', include('django.contrib.admindocs.urls')),
-        url(r'^admin/', include(admin.site.urls)),
-    ]
