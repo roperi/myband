@@ -5,6 +5,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Un viaje que explora las posibilidades del Cello en la compañía de una Guitarra.">
+
+    <meta property="og:title" content="Coctel Dúo | Ensamble acústico de Chihuahua, México" />
+    <meta property="og:description" content="Un viaje que explora las posibilidades del Cello en la compañía de una Guitarra." />
+    <meta property="og:url" content="https://www.coctelduo.com/" />
+    <meta property="og:image" content="https://res.cloudinary.com/dmemufiau/image/upload/v1612480233/coctel_duo_01_256x256_fedgfk.jpg" />
+
     <title>{% block title %}Coctel Dúo{% endblock %}</title>
 
     <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
@@ -14,7 +20,7 @@
     {% block head_css %}{% endblock %}
 </head>
 
-<body id="{% block body_id %}Coctel Duo{% endblock %}">
+<body id="{% block body_id %}Coctel Dúo{% endblock %}">
     <header class="container navigation" role="banner">
         <div class="navigation-wrapper">
             <h1 class="logo"><a href="{% url 'home_page' %}">Coctel Dúo</a></h1>
@@ -76,7 +82,7 @@
             </div>
 
             <p class="copyright">&copy; 2020&ndash;{% now "Y" %} Coctel Dúo. Chihuahua, México. Todos los derechos reservados.</p>
-            <p class="copyright">Sitio creado por <a href="https://github.com/bhrutledge/jahhills.com">Brian Rutledge</a> de <a href="http://hallelujahthehills.com/">Hallelujah The Hills</a></p>
+            <p class="copyright">Sitio de <a href="https://github.com/bhrutledge/jahhills.com">Brian Rutledge</a> (<a href="http://hallelujahthehills.com/">Hallelujah The Hills</a>)</p>
         </section>
     </footer>
 
