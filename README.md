@@ -2,8 +2,9 @@
 
 This repo is entirely based on https://github.com/bhrutledge/jahhills.com . My
 version is very simple in comparison and lacks tons of functionalities. So go and check his if you want to see 
-this project in its full glory. 
+this project in its full glory.
 
+It uses Django 1.11 and Python 3.7.
 
 ## Getting Started
 
@@ -33,3 +34,5 @@ with `python manage.py createsuperuser`
 - Settings file
 - Environment variables management
 - Deployment instructions
+- Update requirements file
+- Update to Django 3 (currently uses Django 1.11)
